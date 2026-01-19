@@ -1,0 +1,13 @@
+kleuren en fonts: sterk te maken met thema (ook geen logo
+geen teksten en afbeeldingen; zelf verzinnen
+doelgroep: 16-40jr
+platform: 2d
+Template: zelfmaken, geen template
+spel HOEFT NIET het zelfde thema te maken; hoeft niet maar, wel leuk
+speciale kleuren en fonts afhankelijk van thema
+De site MOET responsive zijn
+je hoeft niet te inloggen, geen gebruikers.
+rankings moeten lokaal, mogen ook serverside
+geen advertenties
+geen specefieke websites voor inspiraties
+landingspace compleet helemaal gamecraft

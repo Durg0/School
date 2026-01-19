@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <title>Kop of Munt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Kop of Munt</h1>
+            <div class="counter">
+            <p id="kop">KOP: </p>
+            <p id="munt">MUNT: </p>
+        </div>
+    <div class="form">
+        <button onclick="kom()">Kop of Munt</button>
+        <button onclick=""><a href="index.html">Reset counter</a></button>
+        <img id="getInf" src="IMG/euromunt.jpg">
+
+    </div>
+    <script>
+        let counter = 0;
+        let kopCounter = 0;
+        let muntCounter = 0;
+
+
+
+        function kom() {
+            let rm = Math.floor((Math.random() * 2) + 1);
+            console.log(rm);
+
+            if (rm === 1) {
+                muntCounter++;
+                document.getElementById("getInf").src = "IMG/euromunt.jpg";
+            }
+            if (rm === 2) {
+                kopCounter++;
+                document.getElementById("getInf").src = "IMG/eurokop.jpg"
+            }
+            counter = kopCounter + muntCounter;
+            console.log(counter);
+            document.getElementById("kop").innerText = "Kop: " + kopCounter;
+            document.getElementById("munt").innerText = "Munt: " + muntCounter;
+        }
+    </script>
+</body>
+
+</html>
