@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    display: block;
+    padding: 2%;
+    margin: 1%;
+    border: 5px solid pink;
+}
+
+a[href*="contact"] {
+    border: 5px solid orange;
+}
+
+a[href*="https"] {
+    border: 5px solid green;
+}

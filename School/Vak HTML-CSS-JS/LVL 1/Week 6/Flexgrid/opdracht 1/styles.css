@@ -1,0 +1,55 @@
+body {
+    margin: 5px;
+}
+
+.flexgrid {
+    gap: 10px;
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "about projecten projecten"
+        "footer footer footer";
+}
+
+.flexgrid>div {
+    background-color: rgb(173, 173, 173);
+    border: 1px solid black;
+    box-shadow: 3px 3px 10px rgb(84, 84, 84);
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+}
+
+.header img {
+    width: 150px;
+    height: 150px;
+}
+
+.about {
+    grid-area: about;
+}
+
+.projecten {
+    grid-area: projecten;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.footer {
+    grid-area: footer;
+    align-content: flex-end;
+}
+
+.projectbox {
+    width: 900px;
+    height: 100px;
+    background-color: grey;
+    margin-left: 10px;
+}

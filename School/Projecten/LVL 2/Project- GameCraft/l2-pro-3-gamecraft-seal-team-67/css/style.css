@@ -1,0 +1,320 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/bgindex.png);
+    background-size: cover;
+    position: relative;
+    background-color: black;
+}
+
+main {
+    margin: 0 3%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    padding: 5px 30px;
+    background-color: #000000;
+    border-bottom: 4px solid #090909;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-self: start;
+}
+
+.logo img {
+    padding: 10px 0 0 0;
+}
+
+.logo p {
+    font-size: 24px;
+    background: linear-gradient(to right, #8B5CF6, #3B82F6, #06B6D4);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    user-select: none;
+}
+
+.links {
+    display: flex;
+    gap: 20PX;
+    justify-self: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #D1D5DC;
+    font-size: 16px;
+}
+
+.links a:hover {
+    opacity: 0.6;
+}
+
+.welcometothefuture {
+    padding: 15px 24px;
+    width: 15%;
+    height: auto;
+    border-radius: 250px;
+    color: #53EAFD;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(173, 70, 255, 0.50);
+    background: linear-gradient(90deg, rgba(152, 16, 250, 0.30) 0%, rgba(0, 146, 184, 0.30) 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.title {
+    text-align: center;
+}
+
+.title>p:first-child {
+    font-size: 96px;
+    background: linear-gradient(to right, #C27AFF 0%, #FB64B6 50%, #00D3F2 100%);
+    background-clip: text;
+    color: transparent;
+    margin: 0px;
+    margin-top: 1%;
+}
+
+.titletext {
+    font-size: 24px;
+    color: #D1D5DC;
+}
+
+.titlebuttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    user-select: none;
+}
+
+.btnstartplaying {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #E60076 0%, #9810FA 50%, #E60076 100%);
+    background-size: 200%;
+    background-position: 100%;
+    box-shadow: 0 10px 15px -3px rgba(173, 70, 255, 0.50), 0 4px 6px -4px rgba(173, 70, 255, 0.50);
+    padding: 15px 30px 15px 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.btnlearnmore {
+    border-radius: 10px;
+    border: 0.1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.10);
+    padding: 15px 30px 15px 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    background: linear-gradient(90deg, #ffffff1a 0%, #ffffff2d 25%, #ffffff47 50%, #ffffff1a 100%);
+    background-size: 300%;
+}
+
+.btnlearnmore:hover {
+    transform: scale(1.1);
+    background-position: 100%;
+}
+
+
+.btnstartplaying:hover {
+    transform: scale(1.1);
+    background-position: 0%;
+}
+
+.ftdtitle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.ftdtitle p {
+    margin: 0px;
+}
+
+.ftdtitle :nth-child(1) {
+    font-size: 48px;
+    background: linear-gradient(90deg, #C27AFF 0%, #00D3F2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ftdtitle :nth-child(2) {
+    font-size: 18px;
+    color: #99A1AF;
+    margin-top: 23px;
+}
+
+.featured {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cardflex {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.gamecard {
+    width: 25%;
+    height: 480px;
+    background-color: red;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.050);
+    border: 1px solid rgba(255, 255, 255, 0.100);
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+}
+
+.gamecard:hover {
+    transform: scale(1.05);
+}
+
+.gamecard h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.rating {
+    margin-top: 15px;
+    height: 12px;
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.rating img {
+    width: 13px;
+    height: 12px;
+}
+
+.carddown p {
+    color: #99A1AF;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.cardup {
+    flex: 1.5;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardup img:nth-child(2) {
+    height: 48px;
+    margin-top: 15px;
+}
+
+.carddown {
+    flex: 2;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.btnplay {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #E60076 0%, #9810FA 50%, #E60076 100%);
+    background-size: 200%;
+    background-position: 100%;
+    user-select: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20%;
+    transition: 0.3s ease-in-out;
+}
+
+.btnplay:hover {
+    transform: scale(1.1);
+    background-position: 0%;
+}
+
+.info {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 12%;
+}
+
+.infocard {
+    width: 240px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.050);
+    border: 1px solid rgba(255, 255, 255, 0.100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.infocard h3 {
+    font-size: 36px;
+    margin: 0;
+    background: linear-gradient(to right,#8B5CF6, #3B82F6, #06B6D4);
+    background-clip: text;
+    color: transparent;
+}
+
+.infocard p {
+    color: #99A1AF;
+}
+
+.footer {
+    border-top: 4px solid #090909;
+    text-align: center;
+    color: #99A1AF;
+    background-color: black;
+    padding: 50px;
+}
+
+.footer p:nth-child(1) {
+    font-size: 16px;
+}
+
+.footer p:nth-child(2) {
+    font-size: 14px;
+    margin: 0px;
+}

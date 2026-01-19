@@ -1,0 +1,30 @@
+.albums {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.album1 {
+    width: 200px;
+    height: 200px;
+}
+
+.album2 {
+    width: 200px;
+    height: 200px;
+}
+
+.album3 {
+    width: 200px;
+    height: 200px;
+}
+
+.album4 {
+    width: 200px;
+    height: 200px;
+}
+
+.album5 {
+    width: 200px;
+    height: 200px;
+}

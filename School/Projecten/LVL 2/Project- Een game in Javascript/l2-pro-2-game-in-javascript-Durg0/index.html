@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Blackjack</title>
+</head>
+
+<body>
+    <div class="startscrn"><!--START BEGINNING SCREEN-->
+        <h1>BLACK JACK<br>
+            <h2>Made by Sytze Spierings, 2025</h2>
+        </h1>
+        <div class="btn1" onclick="bnstart()">BEGIN</div>
+    </div>
+    <div class="betscrn"><!--BET INPUT SCREEN-->
+        <h1>BLACK JACK<br>
+            <h2>Made by Sytze Spierings, 2025</h2>
+        </h1>
+        <div class="moneyguide"><p>You begin with €1,000.<br>Bet win payout = 2X<br> Blackjack payout = 2.5X</p></div>
+        <div class="betrow">
+            <div>
+                <p>Place here you bet ranging from 1<br>to unlimited.</p>
+                <div class="betamount">
+                    <input class="amount1" id="betamount" placeholder="Place here your bet">
+                </div>
+            </div>
+            <div>
+                <p>Place here you Blackjack amount.<br>If not filled in, default Blackjack = 21.<br>Blackjack cannot be
+                    higher than 100.</p>
+                <div class="bjamount">
+                    <input class="amount1" id="bjamount" placeholder="Place here the Blackjack amount, Default 21">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="btn1" onclick="ststart()">START GAME</div>
+    </div>
+    <main><!--MAIN GAME-->
+        <div class="flex">
+            <div class="indicatorpmoney">Money: €<span id="indicatorpmoney"></span></div>
+            <div class="dcard" id="cardContainer"></div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

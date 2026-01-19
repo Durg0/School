@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Position planet</title>
+		<link rel="stylesheet" href="css/styles.css">
+<style>
+	
+	
+	
+</style>
+</head>
+<body>
+	<h1>CSS / HTML The Position Planet Challenge</h1>
+	<div class="explain leerdoel">
+		<p>leerdoel:</p>
+		<p>Je leert in deze oefening hoe je via CSS met de 'position' eigenschappen omgaat. 
+		Je leert elementen te plaatsen met zowel 'absolute' als 'relative' eigenschappen. 
+		</p>
+	</div>
+	<section>
+		<div class="explain opdracht">
+			<p>Opdracht:</p>
+			<p>Plaats de verschillende elementen zoals in de volgende afbeelding. Doe dit zo nauwkeurig mogelijk!</p>
+				<div class="image_container">
+					<img class="example_image" src="img/voorbeeld.png" alt="voorbeeld afbeelding">
+				</div>
+			<ul>
+		
+				<li>Let goed op de borders van de elementen. In het voorbeeld overlappen deze elkaar niet, zorg daar ook voor in jouw oplossing.</li>
+				<li>Tip: bepaal aan de hand van de <span class="italic">width</span> en de <span class="italic">height</span> van de diverse elementen hun positie</li>		
+			</ul>
+		</div> 
+	</section>
+	
+	<section>
+		<button class="HelperButton" onclick="helpMe()">Hulp nodig?</button>
+		<h3 class="hidden">Handige links</h3>
+		<ul class="hidden">
+			<li>
+				<a href="https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/" target="_blank">
+					Lees dit!
+				</a>
+			</li>
+			<li>			
+				<a href="https://css-tricks.com/almanac/properties/p/position/" target="_blank">
+					Of dit!
+				</a>
+			</li>
+			<li>
+				<a href="https://css-tricks.com/absolute-positioning-inside-relative-positioning/" target="_blank">
+					En anders dit....
+				</a>
+			</li>
+		</ul>
+	</section>
+	
+	<hr>
+
+	<div class="container">
+		<div class="redbox">
+			<img class="planet" src="img/planet.png">
+		</div>
+		
+		<img class="creature" src="img/mr-pink.png">
+		
+		<div class="greeting">
+			<p>Hello! Welcome to position planet!</p>
+		</div>
+	</div>
+	
+	
+		
+	
+	
+	<script>
+	/*
+	Officieel dient javascript in de head tags of beter nog in zijn eigen .js bestand te staan.
+	*/
+		function helpMe() {
+			//document.getElementById("hiddenList").style.display = 'block';
+			var x = document.getElementsByClassName("hidden");
+			var i;
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = 'block';
+			}
+			var y = document.getElementsByClassName("HelperButton");
+			var j;
+			for (j = 0; j < y.length; j++) {
+				y[j].style.display = 'none';
+			}
+		}
+	</script>
+
+	
+</body>
+</html>

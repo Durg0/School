@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: blue;
+}
+
+span {
+    font-size: 200%;
+}
+
+h2 {
+    background-color: blue;
+    color: white;
+}

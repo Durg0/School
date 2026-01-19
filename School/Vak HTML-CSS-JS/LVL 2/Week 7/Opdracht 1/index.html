@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rekenmachine 2.0</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .container > div:last-child {
+            text-align: end;
+            flex: 0.1;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div><input type="number" name="number1" placeholder="Number 1" step="any"></div>
+            <div>
+                <select name="operator">
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">x</option>
+                    <option value="divide">/</option>
+                </select>
+            </div>
+            <div><input type="number" name="number2" placeholder="Number 2" step="any"></div>
+            <div><input type="submit" value="="></div>
+            <div id="result">#</div>
+        </div>
+    </form>
+    
+    <script>
+        
+    </script>
+</body>
+</html>

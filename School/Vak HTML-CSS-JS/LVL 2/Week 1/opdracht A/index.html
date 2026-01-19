@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Jouw Profiel</h1>
+    <div class="form">
+        <button onclick="start()">Start Quiz</button>
+        <button ><a href="index.html">Reset</a></button>
+    </div>
+    <div class="info">
+        <p id="getinf">Naam: <br>Favoriete kleur: <br>Houdt van pizza:<br>Favotiete getal:</p>
+    </div>
+
+    <script>
+        function start() {
+            let naam = prompt("Wat is jouw naam?");
+            if (naam === "") {
+                alert("Error: Niets ingevuld.");
+                return;
+            }
+            else {
+            let kleur = prompt("Wat is jouw favoriete kleur?");
+            if (kleur === "") {
+                alert("Error: Niets ingevuld.");
+                return;
+            }
+            else {
+            let pizza = confirm("Hou je van pizza?");
+            let getal = prompt("Wat is jouw favoriete getal?");
+            if (getal === "") {
+                alert("Error: Niets ingevuld.");
+                return;
+            }
+            else {
+
+            document.getElementById("getinf").innerHTML =
+                "Naam: " + naam + "<br>" +
+                "Favoriete kleur: " + kleur + "<br>" +
+                "Houdt van pizza: " + (pizza ? "Ja" : "Nee") + "<br>" +
+                "Favoriete getal: " + getal;
+            }}}
+        }
+    </script>
+</body>
+
+</html>

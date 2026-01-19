@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Eenvoudige Rekenmachine</h1>
+    <div class="form">
+        <button onclick="op()">Optellen</button>
+        <button onclick="af()">Aftrekken</button>
+        <button onclick="ver()">Vermenigvuldigen</button>
+        <button onclick="del()">Delen</button>
+    </div>
+
+    <script>
+
+        // Gebruiker klikt op "Optellen"
+        // Input: getal1 = 10, getal2 = 5
+        // Output: "10 + 5 = 15"
+        function op() {
+            let getal1 = prompt("Vul Getal 1 in.");
+            let getal2 = prompt("Vul Getal 2 in.");
+            getal1 = Number(getal1);
+            getal2 = Number(getal2);
+            console.log(getal1 + getal2);
+            antwoord = Number(getal1 + getal2);
+            alert("Het antwoord is = " + antwoord);
+        }
+
+        // Gebruiker klikt op "Aftrekken"
+        // Input: getal1 = 10, getal2 = 5
+        // Output: "10 - 5 = 5"
+        function af() {
+            let getal1 = prompt("Vul Getal 1 in.");
+            let getal2 = prompt("Vul Getal 2 in.");
+            getal1 = Number(getal1);
+            getal2 = Number(getal2);
+            console.log(getal1 - getal2);
+            antwoord = Number(getal1 - getal2);
+            alert("Het antwoord is = " + antwoord);
+        }
+
+        // Gebruiker klikt op "Vermenigvuldigen"
+        // Input: getal1 = 10, getal2 = 5
+        // Output: "10 * 5 = 50"
+        function ver() {
+            let getal1 = prompt("Vul Getal 1 in.");
+            let getal2 = prompt("Vul Getal 2 in.");
+            getal1 = Number(getal1);
+            getal2 = Number(getal2);
+            console.log(getal1 * getal2);
+            antwoord = Number(getal1 * getal2);
+            alert("Het antwoord is = " + antwoord);
+        }
+
+        // Gebruiker klikt op "Delen"
+        // Input: getal1 = 10, getal2 = 5
+        // Output: "10 / 5 = 2"
+        function del() {
+            let getal1 = prompt("Vul Getal 1 in.");
+            let getal2 = prompt("Vul Getal 2 in.");
+            getal1 = Number(getal1);
+            getal2 = Number(getal2);
+            console.log(getal1 / getal2);
+            antwoord = Number(getal1 / getal2);
+            alert("Het antwoord is = " + antwoord);
+        }
+    </script>
+</body>
+
+</html>

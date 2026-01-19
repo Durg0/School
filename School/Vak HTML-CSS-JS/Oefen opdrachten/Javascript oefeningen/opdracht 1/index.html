@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>hello world!</h1><br>
+    <button onclick="toonbericht()">klik op mij</button>
+    <button onclick="toonbericht2()">klik op mij V2.0</button>
+    <button onclick="prompt1()">Wat is jouw naam?</button>
+    <button onclick="contest()"> confirm</button>
+    <button onclick="fav()"> Fav dier</button>
+    <br>
+    <button onclick="test1()"> CLICK MIJ DIKKE ACHTERLIJKE KUT</button>
+
+
+    <script>
+        function toonbericht() {
+            alert("hallo wereld");
+        }
+        function toonbericht2() {
+            alert("dit is bericht nummer 2 yo");
+        }
+
+
+        function prompt1() {
+            let prompt1 = prompt("Wat is je naam?");
+            alert("Hallo, " + prompt1 + "! Welkom.");
+        }
+
+        function contest() {
+            let contest = confirm("wil je door gaan?");
+            if (contest) {
+                alert("je hebt bevestigd");
+            } else {
+                alert("je hebt geannuleerd.");
+            }
+        }
+
+        function fav() {
+            let fav = prompt("Wat je favoriete dier?");
+            if (fav.toLowerCase() === "hond") {
+                alert("Dat is ook mijn favoriet!");
+            } else {
+                alert("Leuk, fuck jou!");
+            }
+        }
+
+        function test1() {
+            let naam = prompt("Wat is je naam?");
+            let kleur = prompt("Wat is je lievelingskleur?");
+            let pizza = confirm("Hou je van pizza?");
+
+            let result = "Hallo, " + naam + "! Je lievelingskleur is " + kleur + ".";
+
+            if (pizza === true) {
+                result += " En je houdt van pizza.";
+            }
+
+            if (pizza === false) {
+                result += " En je houdt niet van pizza.";
+            }
+
+            alert(result);
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+int sec = 1000000000;
+println(sec);
+int uren = sec / 60 / 60;
+println("uren =" + uren);
+int dagen = uren / 24;
+//int dagen = sec / 60 / 24;
+println("dagen =" + dagen);
+int jaren = dagen / 365;
+//int jaren = sec / 60 / 24 / 365;
+println("jaren =" + jaren);

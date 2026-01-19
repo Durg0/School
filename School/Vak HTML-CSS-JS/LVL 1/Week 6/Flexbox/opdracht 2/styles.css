@@ -1,0 +1,115 @@
+.schaakbord {
+    display: flex;
+    justify-content: center;
+}
+
+.svak {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    align-content: center;
+}
+
+.svak:hover {
+    outline: 5px solid yellow;
+    outline-offset: -5px;
+}
+
+.row1 :nth-child(even) {
+    background-color: red;
+}
+
+.row1 :nth-child(odd) {
+    background-color: blue;
+}
+
+.row2 :nth-child(odd) {
+    background-color: red;
+}
+
+.row2 :nth-child(even) {
+    background-color: blue;
+}
+
+/* WHITE PIECES */
+
+/* dit zijn de pionnen */  
+.whitepawns::after {   
+   content:'\265F';
+   font-size: 70px;
+   color: white;
+}   
+   
+/* dit zijn de torens */   
+ .whiterook::after {   
+   content: '\265C';   
+   font-size: 70px;
+   color: white;
+}   
+  
+/* dit zijn de paarden */   
+ .whiteknight::after {   
+   content: '\265E';   
+   font-size: 70px;
+   color: white;
+}   
+  
+/* dit zijn de lopers */   
+ .whitebishop::after {   
+   content: '\265D';   
+   font-size: 70px;
+   color: white;
+}   
+   
+/* dit is de koning */   
+ .whiteking::after {   
+   content: '\265A';   
+   font-size: 70px;
+   color: white;
+}   
+  
+/* dit is de koningin */   
+.whitequeen::after {   
+   content: '\265B';   
+   font-size: 70px;
+   color: white;
+}
+
+/* BLACK PIECES */
+
+.blackpawns::after {
+    content: '\265F';
+    font-size: 70px;
+    color: black;
+}
+
+.blackrook::after {
+    content: '\265C';
+    font-size: 70px;
+    color: black;
+}
+
+.blackknight::after {
+    content: '\265E';
+    font-size: 70px;
+    color: black;
+}
+
+.blackbishop::after {
+    content: '\265D';
+    font-size: 70px;
+    color: black;
+}
+
+.blackking::after {
+    content: '\265A';
+    font-size: 70px;
+    color: black;
+}
+
+.blackqueen::after {
+    content: '\265B';
+    font-size: 70px;
+    color: black;
+}

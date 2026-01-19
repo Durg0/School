@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: orange;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+}
+
+article p:nth-child(1) {
+    color: red;
+    font-size: 150%;
+}
+
+tr:nth-child(even) {
+    background-color: #333;
+    color: white;
+}

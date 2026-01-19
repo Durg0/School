@@ -1,0 +1,184 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(IMG/greenbgd.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    user-select: none;
+}
+
+@font-face {
+    font-family: "PlayingCards";
+    src: url("FONT/playing_cards/CARDS.TTF")
+}
+
+@font-face {
+    font-family: "CinzelDecorative";
+    src: url(FONT/Cinzel_Decorative/CinzelDecorative-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "CinzelDecorative";
+    src: url(FONT/Cinzel_Decorative/CinzelDecorative-Bold.ttf) format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "CinzelDecorative";
+    src: url(FONT/Cinzel_Decorative/CinzelDecorative-Black.ttf) format("truetype");
+    font-weight: 900;
+}
+
+.flex {
+    position: fixed;
+    /* height: 100vh;
+    width: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.red {
+    color: red;
+}
+
+.dcardp {
+    font-family: "PlayingCards";
+    font-size: 200px;
+    background-color: white;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dcard {
+    display:flex;
+    gap:10px;
+}
+
+.button1 {
+    position: absolute;
+}
+
+.startscrn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startscrn h1 {
+    font-size: 100px;
+    font-family: "CinzelDecorative";
+    font-weight: 900;
+    margin-bottom: 0px;
+}
+
+.startscrn h2 {
+    margin-top: 0px;
+    margin-bottom: 200px;
+    font-family: "CinzelDecorative";
+    color: rgb(213, 0, 0);
+    text-decoration: underline;
+}
+
+.betscrn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.betscrn h1 {
+    font-size: 100px;
+    font-family: "CinzelDecorative";
+    font-weight: 900;
+    margin-bottom: 0px;
+}
+
+.betscrn h2 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-family: "CinzelDecorative";
+    color: rgb(213, 0, 0);
+    text-decoration: underline;
+}
+
+main {
+    display: none;
+}
+
+.betscrn {
+    display: none;
+}
+
+.btn1 {
+    color: black;
+    padding: 10px 10px;
+    font-size: 30px;
+    font-weight: 600;
+    width: 250px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    border: 3px solid black;
+}
+
+.btn1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: rgb(20, 20, 20);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn1:hover {
+    color: red;
+}
+
+.btn1:hover::before {
+    width: 100%;
+}
+
+.betrow {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 50%;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(213, 0, 0);
+    margin-bottom: 100px;
+    align-items: flex-end;
+}
+.amount1 {
+    width: 270px;
+}
+.betrow>div {
+    display: flex;
+    flex-direction: column;
+}
+.betrow div p {
+    background-color: white;
+}
+.moneyguide {
+    background-color: white;
+    color: rgb(213, 0, 0);
+    margin: 0 auto;
+    margin-bottom: 75px;
+    font-weight: bold;
+    text-align: center;
+}
+.moneyguide>p {
+    margin: 0px;
+}
+
+.indicatorpmoney {
+    color: white;
+    font-size: 25px;
+}

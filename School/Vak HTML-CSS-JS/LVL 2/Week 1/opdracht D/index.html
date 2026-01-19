@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form">
+        <button onclick="start()">Start spel.</button>
+    </div>
+
+    <script>
+        function start() {
+            let geheimGetal = Math.floor(Math.random() * 10) + 1;
+            console.log(geheimGetal);
+
+            while (true) {
+                let input = prompt("Plaats hier jouw gok. Tussen 1 tot 10.");
+                if (input === null) {
+                    return;
+                }
+                if (input === "") {
+                    alert("Error: Niets ingevuld.");
+                    continue;
+                }
+
+                input = Number(input);
+                if (input > 10) {
+                    alert("Error: Nummer te hoog.")
+                    continue;
+                }
+
+                if (input === geheimGetal) {
+                    alert("Wow, je hebt het goed!\nHet was inderdaad " + geheimGetal + ".");
+                    break;
+                } else if (input < geheimGetal) {
+                    alert("Te laag! Probeer hoger.");
+                } else if (input > geheimGetal) {
+                    alert("Te hoog! Probeer lager.");
+                } else {
+                    alert("Error: Ongeldige invoer.");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

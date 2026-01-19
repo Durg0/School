@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Geboortejaar Calculator</h1>
+    <div class="form">
+        <button onclick="gj()">Bereken mijn geboortejaar</button>
+    </div>
+
+
+    <script>
+        function gj() {
+            let lt = prompt("Vul hier je leeftijd in:");
+
+            if (lt > 120) {
+                alert("Geen geldige leeftijd.");
+                return;
+            }
+
+            if (lt === "") {
+                alert("Error: Niets ingevuld.");
+                return;
+            }
+
+            if (lt === null) {
+                return;
+            }
+
+            lt = Number(lt);
+            antwoord = Number(new Date().getFullYear() - lt);
+            let decennium = Math.floor(antwoord / 10) * 10;
+            let message = "Jouw geboorte jaar is " + antwoord + ".\n\n"
+
+            if (decennium === 2000) {
+                message += "Dat was in de jaren 2000's.\nWist je dat 'Train of Thought' van Dream Theater in 2003 uit kwam?";
+            } else if (decennium === 2010) {
+                message += "Dat was in de jaren 2010s.\nWist je dat 'Magma' van Gojira in 2016 uit kwam?";
+            } else if (decennium === 2020) {
+                message += "Dat was in de jaren 2020s.\nWist je dat 'Absolute Elsewhere' van Blood Incantation in 2024 uit kwam?";
+            } else {
+                message += "Dat was in de jaren 90's.\nWist je dat 'Left Hand Path' van Entombed in 1990 uit kwam?";
+            }
+
+            alert(message);
+        }
+
+    </script>
+</body>
+
+</html>

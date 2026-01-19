@@ -1,0 +1,82 @@
+body { 
+		font-family: "Arial","Helvetica", sans-serif;
+		font-size: 1.2em;
+	}
+	
+	div,img {
+		border: 1px solid black;
+	}
+
+	.explain {
+		width: 60%;
+		text-align:justify;
+		font-size: 1em;
+		padding: 5px;
+	}
+	
+	.leerdoel {
+		font-style: italic;
+	}
+	
+	.italic { font-style: italic; }
+	
+	div.image_container {
+		border:0;		
+	}
+	
+	.image_container {
+		text-align: center;
+		
+	}
+	
+	.example_image { 
+		border:0;
+		width: 35%;
+		
+	}
+	
+	.hidden {
+		display: none;
+	}
+	
+	
+	.container {
+		border: 0; 
+		position: relative;
+		top: 10px;
+		left: 10px;
+	}
+
+
+	.redbox {
+		width:100px;
+		height:100px;
+		background-color:red;
+	}
+
+	.greeting {
+		background: rgb(255, 255, 0);
+		font-family: "Arial","Helvetica", sans-serif;
+		width: 300px;
+		height: 100px;
+		text-align:center;
+		position: absolute;
+		top: 0px;
+		left: 101px;
+	}
+	
+	.creature {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 225px;
+		top: 203px;
+	}
+	
+	.planet {
+		width: 300px;
+		position: absolute;
+		left: 101px;
+		top: 101px;
+	}
+	

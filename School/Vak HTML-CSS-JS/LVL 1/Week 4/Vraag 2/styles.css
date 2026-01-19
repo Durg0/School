@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#special {
+    background-color: yellow;
+}
+
+.alert {
+    border: 1px solid gray;
+}
+
+.alert.s    top {
+    background-color: red;
+}
+
+.alert.go {
+    background-color: green;
+}

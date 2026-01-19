@@ -1,0 +1,93 @@
+.div1 {
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #ff0000;
+}
+
+.div2 {
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #00ff00
+}
+
+.div3 {
+    width: 50%;
+    margin: 10px auto;
+    padding: 30px;
+    background-color: #0000ff;
+}
+
+.div4 {
+    width: 50%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: white;
+}
+
+.b6>div {
+    margin-bottom: 5px;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.b1 {
+    border: 5px solid;
+}
+
+.b2 {
+    border: 5px solid;
+    border-radius: 10px 50px 10px 50px;
+}
+
+.b3 {
+    border: 5px solid;
+    border-radius: 100px;
+}
+
+.b4 {
+    border-top: 5px solid;
+    border-left: 5px solid;
+}
+
+.b5 {
+    border-top: 5px solid;
+    border-left: 5px solid;
+    border-radius: 50px 10px 50px 10px;
+}
+
+.parent {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid black;
+}
+
+.parent>div {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.parent :nth-child(1) {
+    background-color: red;
+}
+
+.parent :nth-child(2) {
+    background-color: green;
+}
+
+.parent :nth-child(3) {
+    background-color: blue;
+}
+
+.parent :nth-child(4) {
+    background-color: yellow;
+}

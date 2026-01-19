@@ -1,0 +1,42 @@
+body {
+    font-family: "raleway";
+    font-size: 1.5em;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url(fonts/Lora/Lora/Lora-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url(fonts/Raleway/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+    font-size: 2em;
+    font-family: "lorem";
+    text-decoration: underline;
+}
+
+span {
+  font-size: 2em;
+}
+
+li {
+  text-transform: capitalize;
+}

@@ -1,0 +1,10 @@
+size(50, 50);
+int som1 = 5;
+som1--;
+println(som1);
+int som2 = 5;
+som2++;
+println(som2);
+int som3 = 5;
+som3*=6;
+println(som3);

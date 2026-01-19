@@ -1,0 +1,136 @@
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+h1 {
+    margin: 0px;
+}
+
+li {
+    height: 50px;
+    width: 150px;
+    align-content: center;
+    text-align: center;
+}
+
+li:hover {
+    background-color: green;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-evenly;
+    font-weight: bolder;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0, 0, 70);
+    align-content: center;
+}
+
+.titleheader {
+    width: 100%;
+    height: 100px;
+    background-color:darkblue;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-content: center;
+    border-bottom: 10px solid rgb(0, 0, 54);
+}
+
+.himg>img {
+    width: 100%;
+    height: 400px;
+    border-bottom: 1px solid black;
+}
+
+.headerp {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.footer {
+    width: 100%;
+    height: 32px;
+    background-color:rgb(0, 0, 70);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    align-content: center;
+}
+/* videos.thml */
+
+.flexinhoud {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.flexrow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexrow video {
+    margin: 0px;
+    width: 560px;
+    height: 315px;
+}
+
+/* audio.hmtl */
+
+.flexaudio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.flexrowau {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    gap: 300px;
+}
+
+.aubox {
+    width: 360px;
+    height: 150px;
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+.vidtext {
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}

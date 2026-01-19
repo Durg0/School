@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "Abril Fatface";
+    src: url("fonts/abril-fatface/Abril_Fatface/AbrilFatface-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Abhayalibre";
+    src: url(fonts/abhayalibre/Abhaya_Libre/AbhayaLibre-Regular.ttf);
+}
+
+@font-face {
+    font-family:"acknowledgement";
+    src: url(fonts/acknowledgement/acknowledgement/ACKNO.TTF);
+}
+
+section>div {
+    margin-top: 20px;
+    width: 1000px;
+    height: 200px;
+    border: 1px solid grey;
+}
+
+section> :nth-child(1) {
+    font-family: "Abril Fatface";
+}
+
+section> :nth-child(2) {
+    font-family: "Abhayalibre";
+}
+
+section> :nth-child(3) {
+    font-family: "acknowledgement";
+}

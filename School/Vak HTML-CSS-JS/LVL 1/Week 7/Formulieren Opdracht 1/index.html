@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registratieformulier</title>
+    <style>
+        main {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .input-icons i {
+            position: absolute;
+        }
+
+        .icon {
+            padding-top: 18px;
+            color: green;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <h2>Registratieformulier</h2>
+        <form action="submit_registration.php" method="post">
+            <div class="input-icons">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" id="fname" name="firstname" placeholder="voornaam" required>
+            </div>
+            <i class="fa fa-user icon"></i>
+            <label for="lname">Achternaam</label>
+            <input type="text" id="lname" name="lastname" required>
+            <i class="fa-solid fa-envelope"></i>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+            <i class="fa-solid fa-lock"></i>
+            <label for="password">Wachtwoord</label>
+            <input type="password" id="password" name="password" required>
+            <i class="fa-solid fa-lock"></i>
+            <label for="cpassword">Bevestig Wachtwoord</label>
+            <input type="password" id="cpassword" name="confirm_password" required>
+            <i class="fa-solid fa-cake-candles"></i>
+            <label for="bday">Geboortedatum</label>
+            <input type="date" id="bday" name="birthday">
+            <i class="fa-solid fa-address-card"></i>
+            <label for="bio">Biografie</label>
+            <textarea id="bio" name="biography" rows="4" cols="50"></textarea>
+            <i class="fa-solid fa-file-lines"></i>
+            <label for="interests">Interesses</label>
+            <select id="interests" name="interests[]" multiple>
+                <option value="music">Muziek</option>
+                <option value="sports">Sport</option>
+                <option value="movies">Films</option>
+            </select>
+            <i class="fa-solid fa-image"></i>
+            <label for="photo">Foto</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+            <input type="submit" name="submit" value="Registreren">
+        </form>
+    </main>
+</body>
+
+</html>
