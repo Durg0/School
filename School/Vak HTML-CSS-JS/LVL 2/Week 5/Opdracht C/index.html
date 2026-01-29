@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Patronen met Geneste Loops</title>
+</head>
+
+<body>
+
+    <h2>Patroon 1</h2>
+    <pre id="pattern1"></pre>
+
+    <h2>Patroon 2</h2>
+    <pre id="pattern2"></pre>
+
+    <h2>Patroon 3</h2>
+    <pre id="pattern3"></pre>
+
+    <script>
+
+        let pattern1 = '';
+        for (let i = 0; i <= 4; i++) {
+            for (let j = 0; j <= i; j++) {
+                pattern1 += j + ' ';
+            }
+            pattern1 += '\n';
+        }
+        document.getElementById('pattern1').textContent = pattern1;
+
+
+        let pattern2 = '';
+        for (let i = 9; i >= 0; i--) {
+            for (let j = 0; j <= i; j++) {
+                pattern2 += j + ' ';
+            }
+            pattern2 += '\n';
+        }
+        document.getElementById('pattern2').textContent = pattern2;
+
+
+        let pattern3 = '';
+        for (let i = 1; i <= 10; i++) {
+            for (let j = 1; j <= i; j++) {
+                pattern3 += '* ';
+            }
+            pattern3 += '\n';
+        }
+        document.getElementById('pattern3').textContent = pattern3;
+    </script>
+
+</body>
+
+</html>

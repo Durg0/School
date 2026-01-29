@@ -18,18 +18,27 @@
     <div id="resultaat"></div>
 
     <script>
-        function bereken() {
-            let start = Number(document.getElementById("start").value);
-            let eind = Number(document.getElementById("eind").value)
-            console.log(start, eind);
+function bereken() {
+    let start = Number(document.getElementById("start").value);
+    let eind = Number(document.getElementById("eind").value);
 
-            let som = 0;
+    let som = 0;
 
-            while (let i = start; i < eind; i++) {
-                som += i;
-            }
-            console.log(som);
-        }
+    let min = Math.min(start, eind);
+    let max = Math.max(start, eind);
+
+    for (let i = min; i <= max; i++) {
+        som += i;
+    }
+
+    // Toon de uitkomst op de pagina
+    document.getElementById("resultaat").innerText = "De som is: " + som;
+
+    // Optioneel: laat een alert zien
+    alert("De som is: " + som);
+
+    console.log(som);
+}
     </script>
 </body>
 

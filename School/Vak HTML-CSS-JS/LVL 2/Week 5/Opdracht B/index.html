@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hoger Lager</title>
+</head>
+
+<body>
+    <h1>🎲 Hoger / Lager Spel</h1>
+    <p>Raad het getal tussen 0 en 100!</p>
+
+    <script>
+        // Computer kiest random getal tussen 0 en 100
+        let randomGetal = Math.floor(Math.random() * 101);
+        let getal = Math.floor(Math.random() * 101);
+        let gok;
+        while (gok != getal) {
+            gok = prompt("Raad het getal (0-100):");
+            if (gok < getal) alert("Te laag!");
+            else if (gok > getal) alert("Te hoog!");
+            else alert("Gefeliciteerd, het was " + getal + "!");
+        }
+    </script>
+</body>
+
+</html>
