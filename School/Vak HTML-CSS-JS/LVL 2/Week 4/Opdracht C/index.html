@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leeftijd Categorie</title>
+</head>
+<body>
+    <script>
+        let leeftijd = Number(prompt("Vul je leeftijd in"));
+
+        if (isNaN(leeftijd) || leeftijd <= 0) {
+            alert("Voer een geldige leeftijd in.");
+        } else {
+            console.log(leeftijd);
+
+            if (leeftijd <= 12) {
+                alert("Kind");
+            } else if (leeftijd <= 17) {
+                alert("Tiener");
+            } else if (leeftijd <= 24) {
+                alert("Jongvolwassene");
+            } else if (leeftijd <= 64) {
+                alert("Volwassene");
+            } else {
+                alert("Senior");
+            }
+        }
+    </script>
+</body>
+</html>
