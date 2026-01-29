@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht A - Basis berekeningen</title>
+</head>
+<body>
+    <div id="opdracht1"></div>
+    <div id="opdracht2"></div>
+    <div id="opdracht3"></div>
+    
+    <script>
+        let a = 5;
+        let b = 10;
+        let c = 15;
+        let getal = 10;
+        let x = 5;
+
+        let eindgetal = (a + b + c) / 3;
+        console.log(eindgetal);
+        document.getElementById("opdracht1").innerHTML = eindgetal;
+        
+        let modulus = getal % 2 == 0;
+        console.log(modulus);
+        document.getElementById("opdracht2").innerHTML = modulus;
+
+        let total = (x * 5) - 3;
+        console.log(total);
+        document.getElementById("opdracht3").innerHTML = total;
+        
+    </script>
+</body>

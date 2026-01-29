@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            width: 50%;
+            gap: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #plus{
+            color: red;
+            font-weight: bold;
+        }
+        #min{
+            color: blue;
+            font-weight: bold;
+        }
+        #keer{
+            color: yellow;
+            font-weight: bold;
+        }
+        #gedeeld{
+            color: green;
+            font-weight: bold;
+        }
+        #rest{
+            color: orange;
+            font-weight: bold;
+        }
+    </style>
+    <h1>Rekenmachine</h1>
+    <div id="getal2">Getal 2: <span id="num2">3</span></div>
+    <div id="getal1">Getal 1: <span id="num1">5</span></div>
+    <hr>
+    <div class="container">
+
+        <div id="optellen">Optellen: <span id="plus"></span></div>
+        <div id="aftrekken">Aftrekken: <span id="min"></span></div>
+        <div id="vermenigvuldigen">Vermenigvuldigen: <span id="keer"></span></div>
+        <div id="delen">Delen: <span id="gedeeld"></span></div>
+        <div id="modulus">Rest bij deling: <span id="rest"></span></div>
+    </div>
+
+    <script>
+        let getal1 = 5;
+        let getal2 = 3;
+        let optellen = getal1 + getal2;
+        let aftrekken = getal1 - getal2;
+        let vermenigvuldigen = getal1 * getal2;
+        let delen = getal1 / getal2;
+        let modulus = getal1 % getal2;
+        document.getElementById("plus").innerHTML = optellen;
+        document.getElementById("min").innerHTML = aftrekken;
+        document.getElementById("keer").innerHTML = vermenigvuldigen;
+        document.getElementById("gedeeld").innerHTML = delen;
+        document.getElementById("rest").innerHTML = modulus;
+    </script>
+</body>
+
+</html>

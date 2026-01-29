@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="text"></div>
+    <button id="verander">verander de kleur</button>
+
+
+
+    <style>
+        #text {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: #000000;
+            margin: 20px;
+        }
+
+        .username {
+            color: red;
+        }
+
+        .age {
+            font-size: 21px;
+        }
+
+        .kleur {
+            color: blue;
+        }
+
+
+    </style>
+
+
+
+
+    <script>
+
+        //gegevens
+        const username = "John";
+        const age = 21;
+        const Plaats = "Amersfoort";
+        const favColor = "blauw";
+        const text = document.getElementById("text");
+
+        text.innerHTML = "Beste <span class='username'>" + username + "</span>, jij bent <span class='age'>" + age + " </span> jaar oud, je woont in " + Plaats + " en je favoriete kleur is <span class='kleur'>" + favColor + "</span>.";
+
+        //kleur veranderen
+        let button = document.getElementById("verander");
+        button.addEventListener("click", function () {
+            //username kleur
+            let usernameElement = document.querySelector(".username");
+            usernameElement.style.color = "orange";
+            //age kleur
+            let kleurElement = document.querySelector(".kleur");
+            kleurElement.style.color = "green";
+        });
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Optel Applicatie</title>
+</head>
+
+<body>
+    <h1>Optel Applicatie</h1>
+
+    <form>
+        <input type="number" id="start" placeholder="Start getal" min="-1000" max="1000">
+        <input type="number" id="eind" placeholder="Eind getal" min="-1000" max="1000">
+        <button type="button" onclick="bereken()">Bereken</button>
+    </form>
+
+    <div id="resultaat"></div>
+
+    <script>
+        function bereken() {
+            let start = Number(document.getElementById("start").value);
+            let eind = Number(document.getElementById("eind").value)
+            console.log(start, eind);
+
+            let som = 0;
+
+            while (let i = start; i < eind; i++) {
+                som += i;
+            }
+            console.log(som);
+        }
+    </script>
+</body>
+
+</html>
