@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <title>Rekenmachine 2.0</title>
@@ -9,38 +10,97 @@
             font-family: Arial, sans-serif;
             font-size: 24px;
         }
+
         .container {
             display: flex;
             height: 100vh;
             justify-content: center;
             align-items: center;
         }
-        .container > div:last-child {
+
+        .container>div:last-child {
             text-align: end;
             flex: 0.1;
         }
     </style>
 </head>
+
 <body>
     <form>
         <div class="container">
-            <div><input type="number" name="number1" placeholder="Number 1" step="any"></div>
+            <div><input id="getal1" type="number" name="number1" placeholder="Number 1" step="any"></div>
             <div>
-                <select name="operator">
+                <select id="operator" name="operator">
                     <option value="add">+</option>
                     <option value="subtract">-</option>
                     <option value="multiply">x</option>
                     <option value="divide">/</option>
+                    <option value="macht">^</option>
+                    <option value="modulus">%</option>
+                    <option value="wortel">√</option>
                 </select>
             </div>
-            <div><input type="number" name="number2" placeholder="Number 2" step="any"></div>
-            <div><input type="submit" value="="></div>
+            <div><input id="getal2" type="number" name="number2" placeholder="Number 2" step="any"></div>
+            <div><input onclick="btnSubmit()" type="submit" value="="></div>
             <div id="result">#</div>
         </div>
     </form>
-    
+
     <script>
-        
+        function btnSubmit() {
+            event.preventDefault()
+            let getal1 = document.getElementById("getal1").value;
+            let getal2 = document.getElementById("getal2").value;
+            let operator = document.getElementById("operator").value;
+
+            if (getal1 === "") {
+                alert("vul Number 1 in");
+                return;
+            }
+
+            if (operator !== "wortel" && getal2 === "") {
+                alert("Vul number 2 in");
+                return;
+            }
+
+            getal1 = parseFloat(getal1);
+            getal2 = parseFloat(getal2);
+            let total;
+
+            switch (operator) {
+                case "add":
+                    total = getal1 + getal2;
+                    break;
+                case "subtract":
+                    total = getal1 - getal2;
+                    break;
+                case "multiply":
+                    total = getal1 * getal2;
+                    break;
+                case "divide":
+                    if (getal1 === 0 && getal2 === 0) {
+                        alert("error, 0 gedeeld door 0");
+                        total = "Onbekend";
+                    } else {
+                        total = getal1 / getal2;
+                    }
+                    break;
+                case "macht":
+                    total = Math.pow(getal1, getal2);
+                    break;
+                case "modulus":
+                    total = getal1 % getal2;
+                    break;
+                case "wortel":
+                    total = Math.sqrt(getal1);
+                    break;
+                default:
+                    total = "Onbekende operator";
+            }
+            console.log(total);
+        }
+
     </script>
 </body>
+
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 50px auto; }
+        input { padding: 10px; width: 70%; }
+        button { padding: 10px 20px; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 10px; margin: 5px 0; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>📝 Todo List</h1>
+    
+    <input id="todoInput" placeholder="Nieuwe todo...">
+    <button onclick="addTodo()">Toevoegen</button>
+    
+    <ul id="todoList"></ul>
+    
+    <script>
+        let todos = [];
+
+        function render() {
+            let list = document.getElementById('todoList');
+            list.innerHTML = '';
+            for (let i = 0; i < todos.length; i++) {
+                let li = document.createElement('li');
+                li.innerHTML = todos[i] + ' <button onclick="removeTodo('+i+')">Verwijder</button>';
+                list.appendChild(li);
+            }
+        }
+
+        function addTodo() {
+            let input = document.getElementById('todoInput');
+            if(input.value != '') {
+                todos.push(input.value);
+                input.value = '';
+                render();
+            }
+        }
+
+        function removeTodo(i) {
+            todos.splice(i,1);
+            render();
+        }
+    </script>
+</body>
+</html>
