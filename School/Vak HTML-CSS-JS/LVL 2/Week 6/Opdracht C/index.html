@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Winkelwagen</title>
 </head>
 
 <body>
+
+    <h3>Producten</h3>
+    <div id="producten"></div>
+
+    <hr>
+
+    <h3>Mijn winkelwagen</h3>
+    <div id="winkelwagen"></div>
+
     <script>
         let producten = [
             { id: 1, naam: "Laptop", prijs: 899, categorie: "Electronics" },
@@ -17,7 +25,128 @@
         ];
 
         let winkelwagen = [];
+
+        let productenDiv = document.getElementById("producten");
+
+        for (let i = 0; i < producten.length; i++) {
+            productenDiv.innerHTML +=
+                producten[i].naam + " (€" + producten[i].prijs + ")" +
+                "<button onclick='addToCart(" + producten[i].id + ")'>Toevoegen</button><br>";
+        }
+
+        function addToCart(productId) {
+            let gevonden = false;
+
+            for (let i = 0; i < winkelwagen.length; i++) {
+                if (winkelwagen[i].productId === productId) {
+                    winkelwagen[i].aantal++;
+                    gevonden = true;
+                }
+            }
+
+            if (gevonden === false) {
+                for (let i = 0; i < producten.length; i++) {
+                    if (producten[i].id === productId) {
+                        winkelwagen.push({
+                            productId: producten[i].id,
+                            naam: producten[i].naam,
+                            prijs: producten[i].prijs,
+                            categorie: producten[i].categorie,
+                            aantal: 1
+                        });
+                    }
+                }
+            }
+
+            displayCart();
+        }
+
+        function removeFromCart(productId) {
+            for (let i = 0; i < winkelwagen.length; i++) {
+                if (winkelwagen[i].productId === productId) {
+                    winkelwagen.splice(i, 1);
+                }
+            }
+            displayCart();
+        }
+
+        function calculateTotal() {
+            let totaal = 0;
+
+            for (let i = 0; i < winkelwagen.length; i++) {
+                totaal += winkelwagen[i].prijs * winkelwagen[i].aantal;
+            }
+
+            return totaal;
+        }
+
+        function calculateDiscount(subtotaal) {
+            let totaalItems = 0;
+            let electronicsItems = 0;
+
+            for (let i = 0; i < winkelwagen.length; i++) {
+                totaalItems += winkelwagen[i].aantal;
+
+                if (winkelwagen[i].categorie === "Electronics") {
+                    electronicsItems += winkelwagen[i].aantal;
+                }
+            }
+
+            if (electronicsItems >= 5) {
+                return 0.20;
+            }
+
+            if (subtotaal > 100) {
+                return 0.15;
+            }
+
+            if (totaalItems >= 3) {
+                return 0.10;
+            }
+
+            return 0;
+        }
+
+        function displayCart() {
+            let winkelDiv = document.getElementById("winkelwagen");
+            winkelDiv.innerHTML = "";
+
+            if (winkelwagen.length === 0) {
+                winkelDiv.innerHTML = "Winkelwagen is leeg";
+                return;
+            }
+
+            for (let i = 0; i < winkelwagen.length; i++) {
+                winkelDiv.innerHTML +=
+                    winkelwagen[i].naam + " (" + winkelwagen[i].aantal + "x) " +
+                    "<button onclick='removeFromCart(" + winkelwagen[i].productId + ")'>Verwijderen</button><br>";
+            }
+
+            let subtotaal = calculateTotal();
+            let kortingPercentage = calculateDiscount(subtotaal);
+            let kortingBedrag = subtotaal * kortingPercentage;
+            let totaal = subtotaal - kortingBedrag;
+
+            let bon = "<pre>";
+            bon += "WINKELWAGEN\n";
+            bon += "-----------\n";
+
+            for (let i = 0; i < winkelwagen.length; i++) {
+                let regelTotaal = winkelwagen[i].prijs * winkelwagen[i].aantal;
+                bon += winkelwagen[i].naam + " (" + winkelwagen[i].aantal + "x) €" + regelTotaal.toFixed(2) + "\n";
+            }
+
+            bon += "----------------------\n";
+            bon += "Subtotaal: €" + subtotaal.toFixed(2) + "\n";
+            bon += "Korting (" + (kortingPercentage * 100) + "%): -€" + kortingBedrag.toFixed(2) + "\n";
+            bon += "----------------------\n";
+            bon += "TOTAAL: €" + totaal.toFixed(2) + "\n";
+            bon += "</pre>";
+
+            winkelDiv.innerHTML += bon;
+        }
     </script>
+
 </body>
 
 </html>
