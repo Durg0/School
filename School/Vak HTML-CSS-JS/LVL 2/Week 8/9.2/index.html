@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registratie Formulier</title>
 </head>
 <body>
-    
+
+<h2>Registratie</h2>
+
+<form id="registerForm">
+    <label>Gebruikersnaam</label><br>
+    <input type="text" id="username">
+    <span id="usernameFeedback">✗</span>
+    <br><br>
+
+    <label>Email</label><br>
+    <input type="text" id="email">
+    <span id="emailFeedback">✗</span>
+    <br><br>
+
+    <label>Wachtwoord</label><br>
+    <input type="password" id="password">
+    <span id="passwordFeedback">✗</span><br>
+    <progress id="strengthMeter" value="0" max="3"></progress>
+    <br><br>
+
+    <label>Bevestig Wachtwoord</label><br>
+    <input type="password" id="confirmPassword">
+    <span id="confirmFeedback">✗</span>
+    <br><br>
+
+    <button type="submit" id="submitBtn" disabled>Registreren</button>
+</form>
+
+<script>
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+
+    const usernameFeedback = document.getElementById("usernameFeedback");
+    const emailFeedback = document.getElementById("emailFeedback");
+    const passwordFeedback = document.getElementById("passwordFeedback");
+    const confirmFeedback = document.getElementById("confirmFeedback");
+
+    const strengthMeter = document.getElementById("strengthMeter");
+    const submitBtn = document.getElementById("submitBtn");
+
+    function validateUsername() {
+        const regex = /^[a-zA-Z0-9]{3,20}$/;
+        if (regex.test(username.value)) {
+            usernameFeedback.textContent = "✓";
+            return true;
+        } else {
+            usernameFeedback.textContent = "✗";
+            return false;
+        }
+    }
+
+    function validateEmail() {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (regex.test(email.value)) {
+            emailFeedback.textContent = "✓";
+            return true;
+        } else {
+            emailFeedback.textContent = "✗";
+            return false;
+        }
+    }
+
+    function validatePassword() {
+        let strength = 0;
+
+        if (password.value.length >= 8) strength++;
+        if (/[A-Z]/.test(password.value)) strength++;
+        if (/[0-9]/.test(password.value)) strength++;
+
+        strengthMeter.value = strength;
+
+        if (strength === 3) {
+            passwordFeedback.textContent = "✓";
+            return true;
+        } else {
+            passwordFeedback.textContent = "✗";
+            return false;
+        }
+    }
+
+    function validateConfirmPassword() {
+        if (
+            password.value === confirmPassword.value &&
+            confirmPassword.value !== ""
+        ) {
+            confirmFeedback.textContent = "✓";
+            return true;
+        } else {
+            confirmFeedback.textContent = "✗";
+            return false;
+        }
+    }
+
+    function checkForm() {
+        const valid =
+            validateUsername() &&
+            validateEmail() &&
+            validatePassword() &&
+            validateConfirmPassword();
+
+        submitBtn.disabled = !valid;
+    }
+
+    username.addEventListener("input", checkForm);
+    email.addEventListener("input", checkForm);
+    password.addEventListener("input", checkForm);
+    confirmPassword.addEventListener("input", checkForm);
+
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Registratie succesvol!");
+    });
+</script>
+
 </body>
 </html>
